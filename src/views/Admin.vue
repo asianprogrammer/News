@@ -1,3 +1,3 @@
 <template>
-    <span>Hello World</span>
+    <span>Admin Panel</span>
 </template>
