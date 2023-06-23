@@ -1,3 +1,4 @@
 <template>
-    <span>Admin Panel</span>
+    <RouterLink to="/">Back</RouterLink>
+    <div>Admin Panel</div>
 </template>

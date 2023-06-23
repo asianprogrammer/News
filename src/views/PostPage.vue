@@ -1,3 +1,11 @@
+<script>
+export default {
+    mounted(){
+        console.log(this.$route.query.show)
+    }
+}
+</script>
+
 <template>
-    <span>Post Pages</span>
+    <span>Post {{ this.$route.query.show }}</span>
 </template>

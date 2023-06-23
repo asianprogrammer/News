@@ -21,9 +21,10 @@ const router = createRouter({
             path: "/",
         },
         {
-            name: "Posts",
-            path: "/post",
-            component: PostPage
+            name: "News",
+            path: "/news/:post",
+            component: PostPage,
+            props: true
         },
         {
             name: "Admin",
