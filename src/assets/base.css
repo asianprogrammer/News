@@ -6,8 +6,8 @@
 }
 
 @font-face {
-    font-family: Helvetica;
-    src: url("./fonts/Helvetica.ttf");
+    font-family: Inter;
+    src: url("./fonts/Inter-Regular.ttf");
 }
 
 *,
@@ -112,4 +112,42 @@ meter {
 body {
   margin: 0;
   padding: 0;
+}
+
+/* Changing font size by tag or header */
+
+h1 {
+    font-size: 2.3rem;
+}
+
+h2 {
+    font-size: 2.1rem;
+}
+
+h3 {
+    font-size: 1.9rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+    font-size: 1.3rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+/* Default input for this news application  */
+input {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: lighter;
+    border: solid 1px var(--gray);
+}
+
+input:focus {
+    border-color: var(--blue-color);
 }
