@@ -1,8 +1,9 @@
 :root {
+    --gray-dark: #797979;
     --gray: #DCDCDC;
     --blue-color: #0085FF;
     --blue-white-color: #a5d3ff;
-    --white-gray: #F9F8FF;
+    --white-gray: #F6F6F6;
 }
 
 @font-face {
@@ -14,8 +15,8 @@
 *::before,
 *::after {
     margin: 0;
-  box-sizing: border-box;
-  font-weight: normal;
+    box-sizing: border-box;
+    font-weight: normal;
 }
 
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
@@ -31,12 +32,15 @@
 }
 
 /* Reapply the pointer cursor for anchor tags */
-a, button {
+a,
+button {
     cursor: revert;
 }
 
 /* Remove list styles (bullets/numbers) */
-ol, ul, menu {
+ol,
+ul,
+menu {
     list-style: none;
 }
 
@@ -52,7 +56,8 @@ table {
 }
 
 /* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
-input, textarea {
+input,
+textarea {
     -webkit-user-select: auto;
 }
 
@@ -110,8 +115,8 @@ meter {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* Changing font size by tag or header */
@@ -151,4 +156,9 @@ input {
 
 input:focus {
     border-color: var(--blue-color);
+}
+
+/* Error class read color */
+.error {
+    color: red;
 }

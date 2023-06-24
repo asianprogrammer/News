@@ -1,10 +1,11 @@
 @import './base.css';
 
 .btn {
-  padding: 5px 20px;
-  background: rgb(211, 211, 211);
-  margin: 0 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 40px;
   border-radius: 4px;
+  background: var(--blue-color);
 }
 
 .btn.active {
@@ -15,10 +16,11 @@
 /* SignUp and SignIn component style */
 .section {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   overflow-x: auto;
   font-family: Inter;
+  padding-bottom: 80ch;
   background: var(--white-gray);
 }
 
@@ -26,14 +28,20 @@
   top: 50%;
   left: 50%;
   width: 90%;
-  padding: 10px;
-  position: fixed;
+  margin: 25px 0;
+  max-width: 600px;
   min-width: 250px;
-  max-width: 500px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  border-radius: 29px;
+  background: #FFF;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 10px;
+  padding-bottom: 50px;
   transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
+  box-shadow: 4px 5px 13px 0px rgba(0, 0, 0, 0.05);
 }
 
 .min-text-btn {
@@ -51,4 +59,20 @@
 
 .min-text-btn:active {
   background: var(--blue-white-color);
+}
+
+/* Logo for sign up and sign in */
+.logo-auth {
+  width: 100px;
+  height: 100px;
+}
+
+/* Center element and texts */
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.center-X {
+  margin: 0 auto;
 }

@@ -1,7 +1,13 @@
 <script>
+import { ref } from 'vue'
 export default {
+    emits: ["actionLogin"],
+    setup(){
+        const usernameError = ref('');
+        const passwordError = ref('');
+    },
     methods: {
-        changeAuth(){
+        changeAuth() {
             this.$emit("actionLogin", 'SignUp')
         }
     }
@@ -9,23 +15,35 @@ export default {
 </script>
 
 <template>
-    <section>
-        <main>
-            <div class="logo">
-                <img width="200" height="200" src="../assets/img/logo.png" alt="News Application" >
-            </div>
-            <h4>Sign In</h4>
-            <span>You don't have an account? <span @click="changeAuth" class="min-text-btn">Register</span></span>
-        </main>
-        <form action="#" @submit.prevent="false">
-            <div class="input">
-                <label for="username">username</label>
-                <input id="username" required type="text">
-            </div>
-            <div class="input">
-                <label for="password">password</label>
-                <input id="password" required type="password">
-            </div>
-        </form>
-    </section>
+    <main class="center">
+        <div class="logo-auth center">
+            <img width="200" height="200" src="../assets/img/logo.png" alt="News Application">
+        </div>
+        <h4>Sign In</h4>
+        <span style="color: var(--gray-dark);">You don't have an account? <span @click="changeAuth" class="min-text-btn">Register</span></span>
+    </main>
+    <form class="center-X" action="#" @submit.prevent="false">
+        <div class="input">
+            <input id="usernameError" required type="text">
+            <label for="usernameError">usernameError</label>
+        </div>
+        <span v-if="usernameError" class="error">{{usernameError}}</span>
+        <div class="input">
+            <input id="passwordError" required type="passwordError">
+            <label for="passwordError">passwordError</label>
+        </div>
+        <div v-if="passwordError" >
+            <span class="error">{{passwordError}}</span>
+            <br><br>
+        </div>
+        <div class="center">
+            <button class="btn">Login</button>
+        </div>
+    </form>
 </template>
+<style>
+body::v-deep {
+    background: red;
+} 
+
+</style>

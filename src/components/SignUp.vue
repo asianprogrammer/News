@@ -1,7 +1,21 @@
 <script>
+import { ref } from 'vue';
 export default {
+    emits: ["actionLogin"],
+    setup() {
+        const firstnameError = ref('');
+        const lastnameError = ref('');
+        const usernameError = ref('');
+        const passwordError = ref('');
+        return {
+            firstnameError,
+            lastnameError,
+            usernameError,
+            passwordError
+        }
+    },
     methods: {
-        changeAuth(){
+        changeAuth() {
             this.$emit("actionLogin", "SignIn")
         }
     }
@@ -9,31 +23,40 @@ export default {
 </script>
 
 <template>
-    <section>
-        <main>
-            <div class="logo">
-                <img width="200" height="200" src="../assets/img/logo.png" alt="News Application" >
-            </div>
-            <h4>Sign Up</h4>
-            <span>Already have an account? <span @click="changeAuth" class="min-text-btn">Login</span></span>
-        </main>
-        <form action="#" @submit.prevent="false">
-            <div class="input">
-                <label for="firstname">First Name</label>
-                <input id="firstname" required type="text">
-            </div>
-            <div class="input">
-                <label for="lastname">Last Name</label>
-                <input id="lastname" required type="text">
-            </div>
-            <div class="input">
-                <label for="username">username</label>
-                <input id="username" required type="text">
-            </div>
-            <div class="input">
-                <label for="password">password</label>
-                <input id="password" required type="password">
-            </div>
-        </form>
-    </section>
+    <main class="center margin-bottom-4px">
+        <div class="logo-auth center">
+            <img width="200" height="200" src="../assets/img/logo.png" alt="News Application">
+        </div>
+        <h4>Sign Up</h4>
+        <span style="color: var(--gray-dark);">Already have an account? <span @click="changeAuth"
+                class="min-text-btn">Login</span></span>
+    </main>
+    <form class="center-X" action="#" @submit.prevent="false">
+        <div class="input">
+            <input id="firstnameError" required type="text">
+            <label for="firstnameError">First Name</label>
+        </div>
+        <span v-if="firstnameError" class="error">{{ firstnameError }}</span>
+        <div class="input">
+            <input id="lastnameError" required type="text">
+            <label for="lastnameError">Last Name</label>
+        </div>
+        <span v-if="lastnameError" class="error">{{ lastnameError }}</span>
+        <div class="input">
+            <input id="usernameError" required type="text">
+            <label for="usernameError">usernameError</label>
+        </div>
+        <span v-if="usernameError" class="error">{{usernameError}}</span>
+        <div class="input">
+            <input id="passwordError" required type="passwordError">
+            <label for="passwordError">passwordError</label>
+        </div>
+        <div v-if="passwordError" >
+            <span class="error">{{ passwordError }}</span>
+            <br><br>
+        </div>
+        <div class="center">
+            <button class="btn">Create Account</button>
+        </div>
+    </form>
 </template>

@@ -26,11 +26,11 @@ export default {
 <template>
 
   <!-- Router Link -->
-  <section v-if="isActive">
+  <template v-if="isActive">
     <RouterLink to="/admin">Admin</RouterLink>
     <RouterLink to="/news/post?show=This is coding ninja and you are watching my work space">Post One</RouterLink>
-  </section>
-  <section>
+  </template>
+
     <RouterView />
-  </section>
+
 </template>

@@ -1,4 +1,5 @@
 <script>
+import "../assets/auth.css"
 import { ref } from 'vue';
 import SignIn from '../components/SignIn.vue';
 import SignUp from '../components/SignUp.vue';
@@ -31,7 +32,7 @@ export default {
     },
     components: {
         SignIn, SignUp
-    }
+    },
 }
 </script>
 
@@ -39,10 +40,23 @@ export default {
     <section class="section">
         <div class="center-login-form">
             <keep-alive>
-                <transitionGroup name="auth">
-                    <component @actionLogin="changLocalAuth" :is="authComponent"></component>
-                </transitionGroup>
+                <component @actionLogin="changLocalAuth" :is="authComponent"></component>
             </keep-alive>
         </div>
+        <br><br><br>
     </section>
 </template>
+
+<style scoped>
+
+/*
+  Enter and leave animations can use different
+  durations and timing functions.
+*/
+
+.section {
+    width: 100%;
+    height: 100vh;
+    background: var(--white-gray);
+}
+</style>
