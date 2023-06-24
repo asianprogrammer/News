@@ -1,0 +1,5 @@
+<template>
+    <h1>Sign In</h1>
+    <input type="text">
+    <input type="password">
+</template>
