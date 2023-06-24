@@ -5,13 +5,29 @@ import SignUp from '../components/SignUp.vue';
 
 export default {
     setup() {
-        const authComponent = ref("signIn")
+        function authLocal() {
+            if (localStorage.getItem("auth-news")) {
+                return localStorage.getItem("auth-news")
+            } else {
+                localStorage.setItem("auth-news", "SignUp")
+                return "SignUp"
+            }
+        }
+        const authComponent = ref(authLocal())
         return {
             authComponent
         }
     },
     mounted() {
+        console.log(this.authComponent)
         console.log(this.$route)
+    },
+    methods: {
+        changLocalAuth(component) {
+            this.authComponent = component;
+            localStorage.setItem('auth-news', component);
+            console.log(component)
+        },
     },
     components: {
         SignIn, SignUp
@@ -20,13 +36,13 @@ export default {
 </script>
 
 <template>
-    <section>
-        <button @click="authComponent = 'signIn'" class="btn"
-            :class="{ 'active': authComponent === 'signIn' }">Login</button>
-        <button @click="authComponent = 'signUp'" class="btn"
-            :class="{ 'active': authComponent == 'signUp' }">Signup</button>
-        <keep-alive>
-            <component :is="authComponent"></component>
-        </keep-alive>
+    <section class="section">
+        <div class="center-login-form">
+            <keep-alive>
+                <transitionGroup name="auth">
+                    <component @actionLogin="changLocalAuth" :is="authComponent"></component>
+                </transitionGroup>
+            </keep-alive>
+        </div>
     </section>
 </template>

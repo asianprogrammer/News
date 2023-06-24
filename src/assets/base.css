@@ -143,8 +143,9 @@ h6 {
 /* Default input for this news application  */
 input {
     padding: 5px 10px;
+    font-weight: 400;
+    font-size: 0.9rem;
     border-radius: 4px;
-    font-weight: lighter;
     border: solid 1px var(--gray);
 }
 

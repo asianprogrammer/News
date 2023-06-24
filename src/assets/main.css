@@ -11,3 +11,44 @@
   color: #fff;
   background: rgb(0, 60, 255);
 }
+
+/* SignUp and SignIn component style */
+.section {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  overflow-x: auto;
+  font-family: Inter;
+  background: var(--white-gray);
+}
+
+.center-login-form {
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  padding: 10px;
+  position: fixed;
+  min-width: 250px;
+  max-width: 500px;
+  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.min-text-btn {
+  cursor: pointer;
+  user-select: none;
+  border-radius: 2px;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  color: var(--blue-color);
+  transition: background .2s ease-out;
+  -o-transition: background .2s ease-out;
+  -moz-transition: background .2s ease-out;
+  -webkit-transition: background .2s ease-out;
+}
+
+.min-text-btn:active {
+  background: var(--blue-white-color);
+}
