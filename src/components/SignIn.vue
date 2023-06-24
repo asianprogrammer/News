@@ -25,12 +25,12 @@ export default {
     <form class="center-X" action="#" @submit.prevent="false">
         <div class="input">
             <input id="usernameError" required type="text">
-            <label for="usernameError">usernameError</label>
+            <label for="usernameError">username</label>
         </div>
         <span v-if="usernameError" class="error">{{usernameError}}</span>
         <div class="input">
             <input id="passwordError" required type="passwordError">
-            <label for="passwordError">passwordError</label>
+            <label for="passwordError">password</label>
         </div>
         <div v-if="passwordError" >
             <span class="error">{{passwordError}}</span>

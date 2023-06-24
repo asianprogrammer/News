@@ -53,10 +53,4 @@ export default {
   Enter and leave animations can use different
   durations and timing functions.
 */
-
-.section {
-    width: 100%;
-    height: 100vh;
-    background: var(--white-gray);
-}
 </style>
