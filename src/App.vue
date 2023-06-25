@@ -1,5 +1,6 @@
 <script>
-import { reactive, ref } from 'vue';
+import "./assets/post.css";
+import { ref } from 'vue';
 import { RouterView, RouterLink, useRoute, useRouter } from 'vue-router';
 export default {
   components: {
@@ -18,7 +19,7 @@ export default {
 
     return {
       isActive
-    };  
+    };
   },
 }
 

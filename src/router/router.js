@@ -14,6 +14,7 @@ import AdminPanel from "../views/Admin.vue";
 import PostPage from "../views/PostPage.vue";
 import AuthPage from "../views/Auth.vue";
 import NotFound from "../views/NotFound.vue";
+import HomePage from "../views/Home.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -21,6 +22,7 @@ const router = createRouter({
         {
             name: "Home",
             path: "/",
+            component: HomePage
         },
         {
             name: "News",
