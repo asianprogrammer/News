@@ -7,7 +7,8 @@ import Share from "../components/icons/Share.vue";
 
 const title = ref("New news application launched recently")
 const postLink = ref({
-    link: "/news/post?show=New Application Released"
+    link: "/news/post?show=New Application Released",
+    img: "https://i0.wp.com/uxcrush.com/wp-content/uploads/2021/12/instagram-desktop-ui-in-figma.jpg"
 })
 </script>
 <template>
@@ -20,7 +21,7 @@ const postLink = ref({
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati unde eveniet molestiae omnis saepe error, totam illum? Placeat sequi tempore perspiciatis, enim consectetur laboriosam voluptatem ea debitis laudantium neque nesciunt?</p>
             </div>
             <div class="post-image">
-                <img width="100" height="100" src="../assets/img/logo.png" alt="Logo" srcset="../assets/img/logo.png">
+                <img width="100" height="100" :src="postLink.img" alt="Logo" :srcset="postLink.img">
             </div>
             <section class="user-action">
                 <div class="list">
