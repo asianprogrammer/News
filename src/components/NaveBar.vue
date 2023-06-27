@@ -8,7 +8,7 @@
         </div>
     </nav>
     <div class="break">
-        <br><br><br><br><br><br>
+        <br><br><br><br>
     </div>
 </template>
 <style scoped>
