@@ -83,3 +83,7 @@
   -moz-display: flex;
   -webkit-display: flex;
 }
+
+.align-item-center {
+  align-items: center;
+}
