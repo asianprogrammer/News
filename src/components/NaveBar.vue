@@ -4,7 +4,7 @@
             <img src="../assets/img/logo.png" alt="News Logo" srcset="../assets/img/logo.png">
         </div>
         <div class="nav-title">
-            <h2>News</h2>
+            <h3>News</h3>
         </div>
     </nav>
     <div class="break">
@@ -29,5 +29,6 @@ nav {
 .icon {
     width: 70px;
     height: 70px;
+    margin-left: 10px;
 }
 </style>
