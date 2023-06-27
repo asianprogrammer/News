@@ -76,3 +76,10 @@
 .center-X {
   margin: 0 auto;
 }
+
+.flex {
+  display: flex;
+  -o-display: flex;
+  -moz-display: flex;
+  -webkit-display: flex;
+}
