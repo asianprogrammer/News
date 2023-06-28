@@ -3,6 +3,7 @@ import { ref } from "vue";
 import Search from "./icons/Search.vue";
 import Logout from "./icons/Logout.vue";
 const showProfile = ref(false)
+
 </script>
 
 <template>
@@ -19,7 +20,7 @@ const showProfile = ref(false)
 
         <!-- Profile and search button -->
         <div class="right-side flex align-item-center">
-            <form class="flex align-item-center" action="false" @submit.prevent="false">
+            <form class="flex align-item-center" @submit.prevent="">
                 <div class="search">
                     <input type="text" placeholder="Search News" required>
                 </div>
@@ -35,7 +36,7 @@ const showProfile = ref(false)
     </nav>
 
     <!-- User logout popup -->
-    <div v-if="showProfile === true" class="user-profile-popup">
+    <div v-show="showProfile == true" class="user-profile-popup">
 
         <RouterLink to="/" class="flex align-item-center user-select-none">
             <div class="profile-small">
