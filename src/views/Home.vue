@@ -22,7 +22,6 @@ import TopPost from "../components/TopPost.vue";
     right: 50px;
     z-index: 9;
     padding: 15px 20px;
-    position: fixed;
     border-radius: 4px;
     background: #ffffff;
     box-shadow: 4px 5px 13px 0px rgba(0, 0, 0, 0.05);
