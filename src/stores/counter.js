@@ -1,9 +1,9 @@
-import {defineStore} from "pinia";
+import { defineStore } from "pinia";
 
-const postStore = defineStore('post', {
-    state: ()=> {
-        like: 0;
-        post_id: 12;
-        post: 'ok tis is test';
-    }
-})
+export const postStore = defineStore("post", {
+  state: () => {
+    like: 0;
+    post_id: 12;
+    post: "ok tis is test";
+  },
+});

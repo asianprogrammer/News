@@ -13,7 +13,7 @@ export default {
     const router = useRouter();
 
     router.beforeEach((to, from, next) => {
-      to.fullPath === "/" ? isActive.value = true: isActive.value = false;
+      to.fullPath === "/" ? isActive.value = true : isActive.value = false;
       next();
     });
 
@@ -25,13 +25,11 @@ export default {
 
 </script>
 <template>
-
   <!-- Router Link -->
   <template v-if="isActive">
     <RouterLink to="/admin">Admin</RouterLink>
     <RouterLink to="/news/post?show=This is coding ninja and you are watching my work space">Post One</RouterLink>
   </template>
 
-    <RouterView />
-
+  <RouterView />
 </template>
