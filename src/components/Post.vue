@@ -68,6 +68,7 @@ onMounted(async () => {
     </section>
 
     <div v-else>
-        <h2>Loading...</h2>
+        <h1>Loading...</h1>
     </div>
+
 </template>
