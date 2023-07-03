@@ -46,11 +46,3 @@ export default {
         <br><br><br>
     </section>
 </template>
-
-<style scoped>
-
-/*
-  Enter and leave animations can use different
-  durations and timing functions.
-*/
-</style>
