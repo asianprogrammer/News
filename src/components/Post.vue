@@ -5,7 +5,7 @@ import { RouterLink } from "vue-router";
 import Comment from "../components/icons/Comment.vue";
 import LoveOutline from "../components/icons/LoveOutline.vue";
 import Share from "../components/icons/Share.vue";
-
+import TopPost from "../components/TopPost.vue";
 
 let loading = ref(true);
 let post_data = ref([]);
@@ -14,7 +14,7 @@ let imag_loading = ref(true)
 onMounted(async () => {
     try {
         const response = await axios.get('https://jsonplaceholder.typicode.com/photos/?_limit=10')
-        post_data = response.data;
+        post_data = await response.data;
         loading.value = false;
     } catch (e) {
         console.log(e)
@@ -26,7 +26,11 @@ onMounted(async () => {
 <template>
     <section v-if="loading === false" class="posts-container">
 
-        <div v-for="data in post_data" :key="data.id" class="post center-X">
+        <div class="post">
+            <TopPost />
+        </div>
+
+        <div v-for="data in post_data" :key="data.id" class="post">
             <RouterLink to="/" class="post-title">
                 <h3>{{ data.title }}</h3>
             </RouterLink>
@@ -44,19 +48,19 @@ onMounted(async () => {
                     <div class="icon">
                         <LoveOutline />
                     </div>
-                    <span class="count">0</span>
+                    <span class="count">{{Math.round(Math.random(10) * 200)}}</span>
                 </div>
                 <div class="list">
                     <div class="icon">
                         <Comment />
                     </div>
-                    <span class="count">0</span>
+                    <span class="count">{{Math.round(Math.random(10) * 200)}}</span>
                 </div>
                 <div class="list">
                     <div class="icon">
                         <Share />
                     </div>
-                    <span class="count">0</span>
+                    <span class="count">{{Math.round(Math.random(10) * 200)}}</span>
                 </div>
 
             </section>
