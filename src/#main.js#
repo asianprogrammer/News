@@ -1,0 +1,37 @@
+import './assets/main.css'
+
+import { createApp } from 'vue'
+
+import App from './App.vue'
+import router from './router/router.js'
+
+const app = createApp(App)
+
+app.use(router)
+
+app.mount('#app')
+
+// Nativly suppor emac is good and so fast for using wowo.
+let android = document.getElementById("app-square")
+
+android.innerHTML = "Hello World"
+
+andorid.addEventListener("click", fucntion(){
+    let x = event.clinetX;
+    let y = event.clentY;
+
+    app.listener.style = x+'x';
+    app.listener.style = y+'y';
+
+    console.log(x, y)
+
+    // debugind
+
+    try {
+	x + y = x, y;
+	x != y ? return true : return false
+    }catch(e){
+	console.log("This error happend when file not collecting correct data: ", e)
+    }
+    
+})
