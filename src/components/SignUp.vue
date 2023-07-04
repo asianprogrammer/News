@@ -46,12 +46,12 @@ export default {
             <input id="usernameError" required type="text">
             <label for="usernameError">username</label>
         </div>
-        <span v-if="usernameError" class="error">{{usernameError}}</span>
+        <span v-if="usernameError" class="error">{{ usernameError }}</span>
         <div class="input">
             <input id="passwordError" required type="passwordError">
             <label for="passwordError">password</label>
         </div>
-        <div v-if="passwordError" >
+        <div v-if="passwordError">
             <span class="error">{{ passwordError }}</span>
             <br><br>
         </div>
