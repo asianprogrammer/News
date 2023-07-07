@@ -3,17 +3,18 @@ import { ref } from 'vue';
 export default {
     emits: ["actionLogin"],
     setup() {
-        const firstnameError = ref('');
-        const lastnameError = ref('');
+        const first_name_error = ref('');
+        const last_name_error = ref('');
         const usernameError = ref('');
         const passwordError = ref('');
         return {
-            firstnameError,
-            lastnameError,
+            first_name_error,
+            last_name_error,
             usernameError,
             passwordError
         }
     },
+
     methods: {
         changeAuth() {
             this.$emit("actionLogin", "SignIn")
@@ -33,15 +34,15 @@ export default {
     </main>
     <form class="center-X" action="#" @submit.prevent="false">
         <div class="input">
-            <input id="firstnameError" required type="text">
-            <label for="firstnameError">First Name</label>
+            <input id="first_name_error" required type="text">
+            <label for="first_name_error">First Name</label>
         </div>
-        <span v-if="firstnameError" class="error">{{ firstnameError }}</span>
+        <span v-if="first_name_error" class="error">{{ first_name_error }}</span>
         <div class="input">
-            <input id="lastnameError" required type="text">
-            <label for="lastnameError">Last Name</label>
+            <input id="last_name_error" required type="text">
+            <label for="last_name_error">Last Name</label>
         </div>
-        <span v-if="lastnameError" class="error">{{ lastnameError }}</span>
+        <span v-if="last_name_error" class="error">{{ last_name_error }}</span>
         <div class="input">
             <input id="usernameError" required type="text">
             <label for="usernameError">username</label>
